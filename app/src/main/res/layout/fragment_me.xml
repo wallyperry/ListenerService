@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <!--Title-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_toolbar_height"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/me"
+            android:textSize="@dimen/activity_toolbar_text_size" />
+
+    </RelativeLayout>
+
+    <!--Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <!--我的账号-->
+        <LinearLayout
+            android:id="@+id/me_meInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/me_user"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+        <!--关于-->
+        <LinearLayout
+            android:id="@+id/me_meAbout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+        <!--客服电话-->
+        <LinearLayout
+            android:id="@+id/me_servicePhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service_phone"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

