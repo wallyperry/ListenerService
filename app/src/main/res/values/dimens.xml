@@ -8,4 +8,5 @@
     <dimen name="content_text_size_12">12sp</dimen>
     <dimen name="item_client_user_img_height">60dp</dimen>
     <dimen name="content_text_size_14">14sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

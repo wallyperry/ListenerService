@@ -43,6 +43,7 @@ public class MeInfoActivity extends BaseActivity {
                 spUtils.putBoolean("isLogin", false);
                 spUtils.putString("objId", "");
                 startActivity(new Intent(this, LoginActivity.class));
+                finish();
                 break;
             default:
                 break;

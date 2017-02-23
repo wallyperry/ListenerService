@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.wpl.ListenerService.R;
 import com.wpl.ListenerService.adapter.HostInfoRecyclerViewAdapter;
@@ -16,11 +17,13 @@ import com.wpl.ListenerService.mvp.presenter.M_Presenter;
 import com.wpl.ListenerService.mvp.view.M_View;
 import com.wpl.ListenerService.utils.BmobUtils;
 
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.bmob.v3.exception.BmobException;
+
 
 /**
  * 主机信息
@@ -33,6 +36,8 @@ public class HostInfoActivity extends BaseActivity implements M_View.FeedbackDat
     RecyclerView recyclerView;
     @Bind(R.id.hostInfo_notData)
     LinearLayout notData;
+    @Bind(R.id.hostInfo_title)
+    TextView titleTv;
 
     private String objId;
     private HostInfoRecyclerViewAdapter adapter;
@@ -46,9 +51,11 @@ public class HostInfoActivity extends BaseActivity implements M_View.FeedbackDat
     protected void initView() {
         Bundle bundle = getIntent().getExtras();
         objId = bundle.getString("objId");
+        titleTv.setText(bundle.getString("clientUsername"));
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
+
         initRefresh();
     }
 
@@ -99,12 +106,12 @@ public class HostInfoActivity extends BaseActivity implements M_View.FeedbackDat
 
     @Override
     public void loadSuccess(List<FeedbackData> dataList) {
-        LogE("clientUser.size:" + dataList.size());
         refreshLayout.setRefreshing(false);
         if (dataList.size() == 0) {
             setDataLayout(false);
         } else {
             setDataLayout(true);
+            Collections.sort(dataList, (o1, o2) -> o2.getCreatedAt().compareTo(o1.getCreatedAt()));
             adapter = new HostInfoRecyclerViewAdapter(this, dataList, false);
             adapter.setOnItemClickListener((viewHolder, data, position) -> {
                 ToastShow("电话：" + data.getCallLog().size());
@@ -120,4 +127,5 @@ public class HostInfoActivity extends BaseActivity implements M_View.FeedbackDat
             ToastShow(BmobUtils.errorMsg(e.getErrorCode()));
         }
     }
+
 }
