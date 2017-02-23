@@ -98,7 +98,6 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
 
     @Override
     public void loadSuccess(List<ClientUser> clientUser) {
-        LogE("clientUser.size:" + clientUser.size());
         refreshLayout.setRefreshing(false);
         if (clientUser.size() == 0) {
             setDataLayout(false);
@@ -108,6 +107,7 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
             adapter.setOnItemClickListener((viewHolder, data, position) -> {
                 Bundle bundle = new Bundle();
                 bundle.putString("objId", data.getObjectId());
+                bundle.putString("clientUsername", data.getPhoneInfo());
                 Intent intent = new Intent(activity, HostInfoActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);

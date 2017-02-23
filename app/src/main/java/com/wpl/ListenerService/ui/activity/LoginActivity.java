@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
@@ -94,13 +95,16 @@ public class LoginActivity extends BaseActivity implements M_View.LoginView {
         new Handler().postDelayed(() -> {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             LoginActivity.this.finish();
-        }, 1200);
+        }, 800);
     }
 
     @Override
     public void loginError(BmobException e) {
         isShowProgress(false);
         ToastShow(BmobUtils.errorMsg(e.getErrorCode()));
-//        LogE("loginError:" + "code:" + e.getErrorCode() + ", msg:" + e.getMessage());
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }
