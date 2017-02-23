@@ -41,4 +41,22 @@ public interface M_View {
 
         void loadError(BmobException e);
     }
+
+    /**
+     * 更改状态
+     */
+    interface FeedbackChangeView {
+        void changeSuccess();
+
+        void changeError(BmobException e);
+    }
+
+    /**
+     * 删除返回的数据
+     */
+    interface FDDataDeleteView {
+        void deleteSuccess();
+
+        void deleteError(BmobException e);
+    }
 }

@@ -27,4 +27,18 @@ public interface M_Presenter {
     interface FeedbackDataPresenter {
         void getFeedbackData(String userId);
     }
+
+    /**
+     * 更改状态
+     */
+    interface FeedbackChangePresenter {
+        void changeFeedback(Boolean isFeedback, String objId);
+    }
+
+    /**
+     * 删除返回的数据
+     */
+    interface FDDataDeletePresenter {
+        void deleteFdData(String objId);
+    }
 }

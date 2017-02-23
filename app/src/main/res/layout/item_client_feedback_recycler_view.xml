@@ -55,7 +55,7 @@
                     android:id="@+id/itemFeedback_callImg"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:src="@mipmap/call_icon" />
+                    android:src="@mipmap/ic_phone_grey600_24dp" />
 
                 <TextView
                     android:id="@+id/itemFeedback_callText"
@@ -76,7 +76,7 @@
                     android:layout_height="12dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginStart="15dp"
-                    android:src="@mipmap/sms_icon" />
+                    android:src="@mipmap/ic_email_grey600_24dp" />
 
                 <TextView
                     android:id="@+id/itemFeedback_smsText"
@@ -120,7 +120,7 @@
                 <ImageView
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:src="@mipmap/time_icon" />
+                    android:src="@mipmap/ic_access_time_grey600_24dp" />
 
                 <TextView
                     android:id="@+id/itemFeedback_date"

@@ -10,6 +10,9 @@ public class BmobUtils {
     public static String errorMsg(int code) {
         String msg;
         switch (code) {
+            case -1:
+                msg = "正在等待被控端返回数据...";
+                break;
             case 9001:
                 msg = "Application Id为空，请初始化.";
                 break;
@@ -68,7 +71,7 @@ public class BmobUtils {
                 msg = "格式不正确";
                 break;
             case 101:
-                msg = "用户名或密码不正确";
+                msg = "参数错误";
                 break;
             default:
                 msg = "未知错误";

@@ -97,6 +97,50 @@
 
                 </LinearLayout>
 
+                <com.github.clans.fab.FloatingActionMenu
+                    style="@style/FabMenu"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    app:menu_colorNormal="@color/fab_1"
+                    app:menu_colorPressed="@color/fab_2"
+                    app:menu_colorRipple="@color/fab_3"
+                    app:menu_labels_ellipsize="end"
+                    app:menu_labels_singleLine="true">
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/hostInfo_fab_1"
+                        style="@style/FabMenu.Buttons"
+                        android:src="@mipmap/ic_wb_cloudy_white_18dp"
+                        app:fab_label="@string/hostInfo_fab_1" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/hostInfo_fab_2"
+                        style="@style/FabMenu.Buttons"
+                        android:src="@mipmap/ic_create_white_18dp"
+                        app:fab_label="@string/hostInfo_fab_2" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/hostInfo_fab_5"
+                        style="@style/FabMenu.Buttons"
+                        android:src="@mipmap/ic_phone_white_18dp"
+                        app:fab_label="@string/hostInfo_fab_5" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/hostInfo_fab_3"
+                        style="@style/FabMenu.Buttons"
+                        android:src="@mipmap/ic_open_in_new_white_18dp"
+                        app:fab_label="@string/hostInfo_fab_3" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/hostInfo_fab_4"
+                        style="@style/FabMenu.Buttons"
+                        android:src="@mipmap/ic_delete_white_18dp"
+                        app:fab_label="@string/hostInfo_fab_4" />
+
+                </com.github.clans.fab.FloatingActionMenu>
+
 
             </RelativeLayout>
 

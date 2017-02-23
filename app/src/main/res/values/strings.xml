@@ -30,4 +30,11 @@
     <string name="call">电\t话：<u>18244267955</u></string>
     <string name="host_info">主机信息</string>
     <string name="not_FeedbackData">被控端无数据上传</string>
+    <string name="hostInfo_fab_1">发送请求</string>
+    <string name="hostInfo_fab_2">修改备注</string>
+    <string name="hostInfo_fab_3">移除设备</string>
+    <string name="hostInfo_fab_4">清空记录</string>
+    <string name="hostInfo_fab_5">直接拨号</string>
+
+
 </resources>

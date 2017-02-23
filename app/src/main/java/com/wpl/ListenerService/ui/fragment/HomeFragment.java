@@ -40,7 +40,6 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
     LinearLayout notData;
 
     private SPUtils spUtils;
-    private ClientUserRecyclerViewAdapter adapter;
 
     @Override
     protected int setLayoutResourceId() {
@@ -103,7 +102,7 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
             setDataLayout(false);
         } else {
             setDataLayout(true);
-            adapter = new ClientUserRecyclerViewAdapter(activity, clientUser, false);
+            ClientUserRecyclerViewAdapter adapter = new ClientUserRecyclerViewAdapter(activity, clientUser, false);
             adapter.setOnItemClickListener((viewHolder, data, position) -> {
                 Bundle bundle = new Bundle();
                 bundle.putString("objId", data.getObjectId());
