@@ -24,7 +24,6 @@ public class HostInfoRecyclerViewAdapter extends BaseAdapter<FeedbackData> {
 
     @Override
     protected void convert(ViewHolder holder, FeedbackData data, int position) {
-        Log.e("Adapter", "第" + position + "条数据的网络：" + data.getNetType());
         try {
             holder.setText(R.id.itemFeedback_poi, "" + data.getAoi());
             holder.setText(R.id.itemFeedback_date, "" + data.getCreatedAt());

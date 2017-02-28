@@ -9,9 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/callLog_recyclerView"
+        <ListView
+            android:id="@+id/callLog_listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="1px"/>
+
     </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

@@ -51,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@color/white"
+            android:elevation="2dp"
             tl:tl_iconVisible="false"
             tl:tl_indicator_color="@color/colorAccent"
             tl:tl_indicator_width="15dp"

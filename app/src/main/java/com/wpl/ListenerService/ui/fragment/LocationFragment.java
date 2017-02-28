@@ -26,6 +26,5 @@ public class LocationFragment extends BaseFragment {
     @Override
     protected void initView() {
         bundle = activity.getIntent().getExtras();
-        textView.setText("" + bundle.getString("address"));
     }
 }
