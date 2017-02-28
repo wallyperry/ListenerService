@@ -1,23 +1,15 @@
 package com.wpl.ListenerService.ui.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.flyco.tablayout.CommonTabLayout;
-import com.flyco.tablayout.listener.CustomTabEntity;
-import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.wpl.ListenerService.R;
-import com.wpl.ListenerService.adapter.MyFragmentPagerAdapter;
 import com.wpl.ListenerService.base.BaseActivity;
-import com.wpl.ListenerService.bean.TabEntity;
 import com.wpl.ListenerService.ui.fragment.CallLogFragment;
 import com.wpl.ListenerService.ui.fragment.LocationFragment;
 import com.wpl.ListenerService.ui.fragment.SmsLogFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.wpl.ListenerService.view.NoScrollViewPager;
+import com.wpl.ListenerService.view.TabFragmentIndicator;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -26,18 +18,15 @@ import butterknife.OnClick;
  * 详细信息页面
  * Created by 培龙 on 2017/2/27.
  */
-public class LogDetailActivity extends BaseActivity implements OnTabSelectListener, ViewPager.OnPageChangeListener {
+public class LogDetailActivity extends BaseActivity {
     @Bind(R.id.logDetail_tabLayout)
-    CommonTabLayout tabLayout;
+    TabFragmentIndicator tabLayout;
     @Bind(R.id.logDetail_viewPager)
-    ViewPager vp;
+    NoScrollViewPager vp;
 
-    private String[] titles = {"位置", "通话", "短信"};
-    private List<Fragment> fragments;
-    private int[] iconSelectIds = {R.mipmap.ic_tab_me, R.mipmap.ic_tab_me, R.mipmap.ic_tab_me,};
-    private int[] iconUnSelectIds = {R.mipmap.ic_tab_me, R.mipmap.ic_tab_me, R.mipmap.ic_tab_me,};
-    private MyFragmentPagerAdapter adapter;
-    private ArrayList<CustomTabEntity> entities;
+    private View categoryTab;
+
+    public Bundle getSavedInstanceState;
 
     @Override
     protected int initLayoutId() {
@@ -46,23 +35,24 @@ public class LogDetailActivity extends BaseActivity implements OnTabSelectListen
 
     @Override
     protected void initView() {
+        this.getSavedInstanceState = savedInstanceState;
         initTabLayout();
     }
 
     private void initTabLayout() {
-        entities = new ArrayList<>();
-        fragments = new ArrayList<>();
-        fragments.add(new LocationFragment());
-        fragments.add(new CallLogFragment());
-        fragments.add(new SmsLogFragment());
-        adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), fragments);
-        vp.setAdapter(adapter);
-        for (int i = 0; i < titles.length; i++) {
-            entities.add(new TabEntity(titles[i], iconSelectIds[i], iconUnSelectIds[i]));
-        }
-        tabLayout.setTabData(entities);
-        tabLayout.setOnTabSelectListener(this);
-        vp.addOnPageChangeListener(this);
+        tabLayout.addFragment(0, LocationFragment.class);
+        tabLayout.addFragment(1, CallLogFragment.class);
+        tabLayout.addFragment(2, SmsLogFragment.class);
+
+        tabLayout.setTabContainerView(R.layout.tab_indicator);
+        tabLayout.setTabSliderView(R.layout.tab_slider);
+        tabLayout.setOnTabClickListener(v -> {
+            if ((Integer) v.getTag() == 0) {
+                categoryTab = v;
+            }
+        });
+        vp.setNoScroll(true);
+        tabLayout.setViewPager(vp);
     }
 
     @OnClick({R.id.logDetail_back})
@@ -76,28 +66,4 @@ public class LogDetailActivity extends BaseActivity implements OnTabSelectListen
         }
     }
 
-    @Override
-    public void onTabSelect(int position) {
-        vp.setCurrentItem(position);
-    }
-
-    @Override
-    public void onTabReselect(int position) {
-
-    }
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-        tabLayout.setCurrentTab(position);
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
 }

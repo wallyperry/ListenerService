@@ -1,5 +1,7 @@
 package com.wpl.ListenerService.mvp.presenter;
 
+import android.content.Context;
+
 /**
  * presenter
  * Created by Administrator on 2017/2/22.
@@ -68,5 +70,12 @@ public interface M_Presenter {
      */
     interface ClearLogDataPresenter {
         void clearLogData(String objId);
+    }
+
+    /**
+     * 获取当前位置信息
+     */
+    interface CurrentLocationPresenter{
+        void getLocation(Context context);
     }
 }

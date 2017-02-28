@@ -11,4 +11,6 @@
     <color name="fab_2">#f96d8c</color>
     <color name="fab_3">#ff5177</color>
     <color name="tab_layout_not_select_text_color">#aaaaaa</color>
+    <color name="orange">#ff5177</color>
+    <color name="not_select">#aaaaaa</color>
 </resources>
