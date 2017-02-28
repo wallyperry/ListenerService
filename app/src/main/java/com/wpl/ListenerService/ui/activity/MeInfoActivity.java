@@ -10,6 +10,7 @@ import com.wpl.ListenerService.utils.SPUtils;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
 
 /**
  * 我的账号
@@ -38,10 +39,12 @@ public class MeInfoActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.meInfo_changePass:    //修改密码
+                startActivity(new Intent(this, ChangePassActivity.class));
                 break;
             case R.id.meInfo_exitLogin:     //退出登录
                 spUtils.putBoolean("isLogin", false);
                 spUtils.putString("objId", "");
+                BmobUser.logOut();
                 startActivity(new Intent(this, LoginActivity.class));
                 finish();
                 break;
@@ -49,4 +52,5 @@ public class MeInfoActivity extends BaseActivity {
                 break;
         }
     }
+
 }

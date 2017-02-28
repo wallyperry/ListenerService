@@ -10,4 +10,5 @@
     <color name="fab_1">#fc87a0</color>
     <color name="fab_2">#f96d8c</color>
     <color name="fab_3">#ff5177</color>
+    <color name="tab_layout_not_select_text_color">#aaaaaa</color>
 </resources>

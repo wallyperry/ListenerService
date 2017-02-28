@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <!--Title-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_toolbar_height"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/changePass_back"
+            android:layout_width="@dimen/activity_toolbar_height"
+            android:layout_height="@dimen/activity_toolbar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/actionBarItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/change_password"
+            android:textSize="@dimen/activity_toolbar_text_size" />
+
+        <LinearLayout
+            android:id="@+id/changePass_confirm"
+            android:layout_width="@dimen/activity_toolbar_height"
+            android:layout_height="@dimen/activity_toolbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?android:attr/actionBarItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/confirm" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--旧密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/old_pass"
+                android:textSize="@dimen/content_text_size_12" />
+
+            <EditText
+                android:id="@+id/changePass_oldPass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/input_old_pass"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+        <!--新密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_pass"
+                android:textSize="@dimen/content_text_size_12" />
+
+            <EditText
+                android:id="@+id/changePass_newPass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/input_new_pass"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+        <!--确认-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearItemHeight"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_pass"
+                android:textSize="@dimen/content_text_size_12" />
+
+            <EditText
+                android:id="@+id/changePass_newPassTry"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/new_pass_try"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/content_text_size_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -43,6 +43,15 @@ public interface M_View {
     }
 
     /**
+     * 获取某一条数据
+     */
+    interface AFeedbackData {
+        void loadSuccess(FeedbackData data);
+
+        void loadError(BmobException e);
+    }
+
+    /**
      * 更改状态
      */
     interface FeedbackChangeView {
@@ -58,5 +67,32 @@ public interface M_View {
         void deleteSuccess();
 
         void deleteError(BmobException e);
+    }
+
+    /**
+     * 修改密码
+     */
+    interface ChangeUserPassView {
+        void changeSuccess();
+
+        void changeError(BmobException e);
+    }
+
+    /**
+     * 修改被控端备注
+     */
+    interface UpClientInfoView {
+        void onSuccess();
+
+        void onError(BmobException e);
+    }
+
+    /**
+     * 清空数据
+     */
+    interface ClearLogDataView {
+        void clearSuccess();
+
+        void clearError(BmobException e);
     }
 }

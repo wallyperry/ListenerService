@@ -35,6 +35,17 @@
     <string name="hostInfo_fab_3">移除设备</string>
     <string name="hostInfo_fab_4">清空记录</string>
     <string name="hostInfo_fab_5">直接拨号</string>
+    <string name="input_old_pass">请输入旧密码</string>
+    <string name="old_pass">旧密码</string>
+    <string name="new_pass">新密码</string>
+    <string name="input_new_pass">请输入新密码</string>
+    <string name="confirm">确认</string>
+    <string name="new_pass_try">请再输一次</string>
+    <string name="input_info">请输入备注</string>
+    <string name="log_detail">详细信息</string>
+    <string name="location">位置</string>
+    <string name="call_log">通话记录</string>
+    <string name="sms_log">短信记录</string>
 
 
 </resources>

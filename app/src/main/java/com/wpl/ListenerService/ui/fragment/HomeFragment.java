@@ -20,7 +20,6 @@ import com.wpl.ListenerService.ui.activity.HostInfoActivity;
 import com.wpl.ListenerService.utils.BmobUtils;
 import com.wpl.ListenerService.utils.SPUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -52,7 +51,6 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
         LinearLayoutManager layoutManager = new LinearLayoutManager(activity);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        initRefresh();
     }
 
     private void initRefresh() {
@@ -106,6 +104,7 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
             adapter.setOnItemClickListener((viewHolder, data, position) -> {
                 Bundle bundle = new Bundle();
                 bundle.putString("objId", data.getObjectId());
+                bundle.putString("phone", data.getPhone());
                 bundle.putString("clientUsername", data.getPhoneInfo());
                 Intent intent = new Intent(activity, HostInfoActivity.class);
                 intent.putExtras(bundle);
@@ -122,5 +121,11 @@ public class HomeFragment extends BaseFragment implements M_View.ClientListView 
             refreshLayout.setRefreshing(false);
             ToastShow(BmobUtils.errorMsg(e.getErrorCode()));
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initRefresh();
     }
 }

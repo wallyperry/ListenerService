@@ -21,7 +21,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
         initBottomTab();
     }
 
@@ -69,6 +68,4 @@ public class MainActivity extends BaseActivity {
         ToastShow("再按一次退出");
         new Handler().postDelayed(() -> isBackPressed = false, 2000);
     }
-
-
 }

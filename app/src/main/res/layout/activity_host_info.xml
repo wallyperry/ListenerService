@@ -98,6 +98,7 @@
                 </LinearLayout>
 
                 <com.github.clans.fab.FloatingActionMenu
+                    android:id="@+id/hostInfo_floatAction"
                     style="@style/FabMenu"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true"
