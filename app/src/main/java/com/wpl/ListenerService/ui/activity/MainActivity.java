@@ -28,22 +28,24 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initBottomTab() {
+        HomeFragment homeFragment = new HomeFragment();
+        MeFragment meFragment = new MeFragment();
         bottomBar = BottomBar.attach(this, savedInstanceState);
         bottomBar.setActiveTabColor(getResources().getColor(R.color.colorAccent));
         bottomBar.useFixedMode();
         bottomBar.setItemsFromMenu(R.menu.bottombar_menu, menuItemId -> {
             switch (menuItemId) {
                 case R.id.bb_menu_home:
-                    replaceFragment(new HomeFragment());
+                    replaceFragment(homeFragment);
                     break;
                 case R.id.bb_menu_me:
-                    replaceFragment(new MeFragment());
+                    replaceFragment(meFragment);
                     break;
                 default:
                     break;
             }
         });
-        replaceFragment(new HomeFragment());
+        replaceFragment(homeFragment);
         bottomBar.setDefaultTabPosition(0);
         bottomBar.selectTabAtPosition(0, false);
     }
