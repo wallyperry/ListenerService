@@ -48,6 +48,9 @@
         <activity android:name=".ui.activity.HostInfoActivity" />
         <activity android:name=".ui.activity.ChangePassActivity" />
         <activity android:name=".ui.activity.LogDetailActivity" />
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>
