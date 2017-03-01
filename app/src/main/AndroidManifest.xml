@@ -51,14 +51,11 @@
         <activity android:name=".ui.activity.HostInfoActivity" />
         <activity android:name=".ui.activity.ChangePassActivity" />
         <activity android:name=".ui.activity.LogDetailActivity" />
-<<<<<<< HEAD
         <activity
             android:name="cn.bmob.v3.update.UpdateDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-=======
 
         <service android:name="com.amap.api.location.APSService" />
->>>>>>> 238d1cb463d83e7eb708637619271fcbc09f6708
     </application>
 
 </manifest>

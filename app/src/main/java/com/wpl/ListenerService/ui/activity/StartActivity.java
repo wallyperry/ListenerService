@@ -16,6 +16,8 @@ import com.wpl.ListenerService.utils.DialogUtils;
 import com.wpl.ListenerService.utils.PermissionsChecker;
 import com.wpl.ListenerService.utils.SPUtils;
 
+import cn.bmob.v3.update.BmobUpdateAgent;
+
 /**
  * 启动页面
  * Created by Administrator on 2017/2/22.

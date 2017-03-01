@@ -10,6 +10,8 @@ import com.wpl.ListenerService.base.BaseActivity;
 import com.wpl.ListenerService.ui.fragment.HomeFragment;
 import com.wpl.ListenerService.ui.fragment.MeFragment;
 
+import cn.bmob.v3.update.BmobUpdateAgent;
+
 public class MainActivity extends BaseActivity {
     private boolean isBackPressed;
     private BottomBar bottomBar;
@@ -22,6 +24,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         initBottomTab();
+        BmobUpdateAgent.update(this);
     }
 
     private void initBottomTab() {

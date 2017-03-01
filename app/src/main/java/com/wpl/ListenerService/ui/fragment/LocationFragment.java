@@ -87,7 +87,11 @@ public class LocationFragment extends BaseFragment implements M_View.CurrentLoca
                 moveCamera(latLngA);
                 break;
             case R.id.location_fab1:
-                startToAMap();
+                if (latLngA!= null || latLngB != null){
+                    startToAMap();
+                }else {
+                    ToastShow("位置都获取失败了，还怎么去找TA？");
+                }
                 fam.close(true);
                 break;
             default:
