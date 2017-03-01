@@ -4,6 +4,7 @@ import com.wpl.ListenerService.bean.ClientUser;
 import com.wpl.ListenerService.bean.FeedbackData;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
@@ -94,5 +95,14 @@ public interface M_View {
         void clearSuccess();
 
         void clearError(BmobException e);
+    }
+
+    /**
+     * 获取当前位置信息
+     */
+    interface CurrentLocationView {
+        void locationSuccess(Map<String, Object> map);
+
+        void locationError(Map<String, Object> map);
     }
 }

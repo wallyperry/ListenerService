@@ -32,6 +32,9 @@
         android:persistent="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="960b35f5e881e02d0900ae445d8e8bf3" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask" />
@@ -48,9 +51,14 @@
         <activity android:name=".ui.activity.HostInfoActivity" />
         <activity android:name=".ui.activity.ChangePassActivity" />
         <activity android:name=".ui.activity.LogDetailActivity" />
+<<<<<<< HEAD
         <activity
             android:name="cn.bmob.v3.update.UpdateDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+=======
+
+        <service android:name="com.amap.api.location.APSService" />
+>>>>>>> 238d1cb463d83e7eb708637619271fcbc09f6708
     </application>
 
 </manifest>

@@ -46,24 +46,33 @@
         android:layout_marginTop="1px"
         android:orientation="vertical">
 
-        <com.flyco.tablayout.CommonTabLayout
+        <!--<com.flyco.tablayout.CommonTabLayout-->
+        <!--android:id="@+id/logDetail_tabLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:elevation="2dp"-->
+        <!--tl:tl_iconVisible="false"-->
+        <!--tl:tl_indicator_color="@color/colorAccent"-->
+        <!--tl:tl_indicator_width="15dp"-->
+        <!--tl:tl_textBold="SELECT"-->
+        <!--tl:tl_textSelectColor="@color/colorAccent"-->
+        <!--tl:tl_textUnselectColor="@color/tab_layout_not_select_text_color"-->
+        <!--tl:tl_textsize="14sp" />-->
+
+        <com.wpl.ListenerService.view.TabFragmentIndicator
             android:id="@+id/logDetail_tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:background="@color/white"
-            android:elevation="2dp"
-            tl:tl_iconVisible="false"
-            tl:tl_indicator_color="@color/colorAccent"
-            tl:tl_indicator_width="15dp"
-            tl:tl_textBold="SELECT"
-            tl:tl_textSelectColor="@color/colorAccent"
-            tl:tl_textUnselectColor="@color/tab_layout_not_select_text_color"
-            tl:tl_textsize="14sp" />
+            android:foreground="?attr/actionBarItemBackground"
+            android:orientation="vertical" />
 
-        <android.support.v4.view.ViewPager
+        <com.wpl.ListenerService.view.NoScrollViewPager
             android:id="@+id/logDetail_viewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="1px" />
 
     </LinearLayout>
 

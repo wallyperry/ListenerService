@@ -43,9 +43,10 @@
     <string name="new_pass_try">请再输一次</string>
     <string name="input_info">请输入备注</string>
     <string name="log_detail">详细信息</string>
-    <string name="location">位置</string>
+    <string name="location">位置信息</string>
     <string name="call_log">通话记录</string>
     <string name="sms_log">短信记录</string>
+    <string name="location_fab_1">导航去找TA</string>
 
 
 </resources>

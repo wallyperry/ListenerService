@@ -31,6 +31,8 @@ public abstract class BaseFragment extends Fragment {
     //是否对用户可见
     protected boolean isVisible;
 
+    protected Bundle savedInstanceState;
+
     //是否加载完成
     //当执行完onCreateView，view的初始化方法后即为true
     protected boolean isPrepare;
@@ -46,6 +48,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(setLayoutResourceId(), container, false);
         ButterKnife.bind(this, rootView);
+        this.savedInstanceState = savedInstanceState;
         initData(getArguments());
         initView();
         isPrepare = true;

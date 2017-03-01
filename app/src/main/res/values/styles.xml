@@ -31,4 +31,8 @@
         <item name="fab_colorRipple">@color/fab_3</item>
     </style>
 
+    <style name="Style.ActionBarTabTextStyle" parent="android:style/Widget.Holo.Light.ActionBar.TabText">
+        <item name="android:textColor">@color/not_select</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>
