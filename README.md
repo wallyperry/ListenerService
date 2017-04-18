@@ -10,7 +10,7 @@ The purpose of this project is to provide information to another Android mobile 
  - Call record and SMS record
  - Network state
 
-Repository at https://github.com/weipeilong123/PhoneListener.
+Repository at https://github.com/weipeilong123/ListenerService.
 
 ### **Usage**
     The project consists of the control side and the controlled end, please download http://perry.ren
